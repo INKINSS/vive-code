@@ -1,8 +1,9 @@
 {
-    "conventionalCommits.scopes": [
-        "config",
-        "styles",
-        "layout",
-        "pages"
-    ]
+  "conventionalCommits.scopes": [
+    "config",
+    "styles",
+    "layout",
+    "pages",
+    "components"
+  ]
 }
