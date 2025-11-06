@@ -5,7 +5,7 @@ import ArrowIcon from "@/icons/ArrowIcon";
 import Link from "next/link";
 
 const NavBar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const toggleMenu = () => {
     open ? setOpen(false) : setOpen(true);
@@ -18,13 +18,13 @@ const NavBar = () => {
       </Link>
       <div
         onClick={toggleMenu}
-        className={`cursor-pointer mt-1 ${open ? "rotate-0" : "rotate-180"} transition-transform duration-200 md:hidden`}
+        className={`cursor-pointer mt-1 ${open ? "rotate-0 flex" : "rotate-180 fixed right-5"} transition-transform duration-200 md:hidden z-10`}
       >
         <ArrowIcon />
       </div>
       <ul
-        className={`flex fixed right-5 top-6 flex-col items-end gap-2 mt-10 transition-all duration-200 md:hidden ${
-          open ? "translate-x-24" : "translate-x-0"
+        className={`flex fixed pr-6 pt-16 h-screen w-1/2 bg-white right-0 top-0 flex-col items-end gap-2 transition-all duration-200 md:hidden ${
+          open ? "translate-x-56" : "translate-x-0"
         }`}
       >
         <NavLink
