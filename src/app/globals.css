@@ -6,12 +6,16 @@
 
 @theme {
   --color-customWhite: rgb(243, 243, 243);
+  --color-customMainBlack: rgb(44, 44, 44);
+  --color-customLightBlack: rgb(88, 88, 88);
+  --color-customGray: rgb(142, 142, 142);
 }
 
 h1,
 h2,
 h3 {
   font-family: "Roboto Mono", monospace;
+  color: var(--color-customMainBlack);
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -24,10 +28,9 @@ div {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-style: normal;
+  color: var(--color-customLightBlack);
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
