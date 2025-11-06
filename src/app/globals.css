@@ -23,12 +23,10 @@ h3 {
 p,
 span,
 a,
-li,
-div {
+li {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-style: normal;
-  color: var(--color-customLightBlack);
 }
 
 * {
