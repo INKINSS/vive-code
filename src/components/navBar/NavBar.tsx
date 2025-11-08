@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-start mb-6">
+    <nav className="flex justify-between items-start">
       <Link href={'/'} className="text-xl">
         vive<span className="font-semibold">Code</span>
       </Link>
