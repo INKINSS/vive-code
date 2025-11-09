@@ -8,7 +8,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <title>viveCode</title>
       </head>
-      <body className="px-6 py-4 container mx-auto">
+      <body className="px-6 py-4 container mx-auto scrollbar-hidden">
         <NavBar />
         {children}
       </body>
