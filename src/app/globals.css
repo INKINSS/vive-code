@@ -9,7 +9,34 @@
   --color-customMainBlack: rgb(44, 44, 44);
   --color-customLightBlack: rgb(88, 88, 88);
   --color-customGray: rgb(142, 142, 142);
+
+  /*animate*/
+  --animate-blurUp: blur-up 1s ease-in-out both;
+  --animate-blurUp-delay-1: blur-up 1s ease-in-out 0.2s both;
+  --animate-blurUp-delay-2: blur-up 1s ease-in-out 0.4s both;
+  --animate-blurUp-delay-3: blur-up 1s ease-in-out 0.6s both;
+
+  @keyframes blur-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(3px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
 }
+
+.scrollbar-hidden {
+    overflow: auto;
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
 
 h1,
 h2,
