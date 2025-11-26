@@ -3,6 +3,7 @@ import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import matter from "gray-matter";
+import { mdxComponents } from "@/components/mdx/MDXComponents";
 
 export default async function LessonPage({
   params,
@@ -47,6 +48,7 @@ export default async function LessonPage({
   const { content, frontmatter } = await compileMDX({
     source,
     options: { parseFrontmatter: true },
+    components: mdxComponents,
   });
 
   return (
