@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { getLessons, getBlockMetadata } from "@/lib/mdx/getLessons";
 import Link from "next/link";
+import SubmenuHeadings from "@/components/common/NavLink/SubMenuHeading";
 
 const BlockLayout = async ({
   children,
@@ -28,7 +29,7 @@ const BlockLayout = async ({
 
       <div className="drawer-side">
         <label htmlFor="drawer-sidebar" className="drawer-overlay" />
-        <aside className="min-h-full w-80 p-4">
+        <aside className="min-h-full w-80 p-4 border-r border-customGray/40">
           <ul className="menu">
             <Link href={"/blocks/" + blockId} className="py-1 px-3 text-customMainBlack">
               {metadata?.title || blockId}
@@ -44,6 +45,7 @@ const BlockLayout = async ({
                   </span>
                   <span>{lesson.title}</span>
                 </Link>
+                <SubmenuHeadings lesson={lesson} blockId={blockId} />
               </li>
             ))}
           </ul>
