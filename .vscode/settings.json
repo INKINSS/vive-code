@@ -4,6 +4,9 @@
     "styles",
     "layout",
     "pages",
-    "components"
+    "components",
+    "dependencies",
+    "MDX",
+    "assets"
   ]
 }
