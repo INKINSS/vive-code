@@ -5,13 +5,73 @@ slug: "etiquetas"
 description: "Aprende qué son las etiquetas HTML y cómo funcionan"
 ---
 ## concepto de etiquetas
-HTML se caracteríza por trabajar con un concepto llamado **etiquetas**. existen decenas de etiquetas y cada una tiene su propia función y propósito de existir. Lo que nos interesa en este bloque es hacer énfasis en 3 aspectos: **estructura, atributos y tipos de etiquetas que existen**.
+HTML se caracteríza por trabajar con un concepto llamado **etiquetas**. existen decenas de etiquetas y cada una tiene su propia función y propósito de existir. Lo que nos interesa en esta sección es hacer énfasis en 3 aspectos: **la estructura, los atributos y los tipos de etiquetas que existen**.
 
 ## estructura de una etiqueta
-Las etiquetas tienen una estructura propia que comparten entre si. **Estas se estriben usando los signos de mayor y menor que**. dentro de estos signos se escribe el nombre de la etiqueta.
+Las etiquetas tienen una estructura propia que comparten entre si. Se escriben usando los signos de mayor y menor qué, **dentro de estos signos se escribe el nombre de la etiqueta**. Existen etiquetas que únicamente tienen una apertura y nada más, por lo que no requieren de una etiqueta de cierre.
+
+_el siguiente ejemplo muestra la estructura de la etiqueta a_
 
 <img src="/01-etiqueta.svg" alt="etiqueta" />
 
-La mayoría de las etiquetas tienen que tener una etiqueta de cierre, entonces se repite la etiqueta solo que esta vez con una barra diagonal en la etiqueta de cierre, dejando claro que es el cierre.
+Esta etiqueta 'a' (que es abreviatura de anchor o ancla) tiene como propósito hacer un enlace entre la pagina actual con una página web de fuera, en la imagen se muestra la estructura que requiere esta etiqueta señalizada por colores
 
-La mayoría de las etiquetas permiten almacenar contenido entre la etiqueta de apertura y cierre, aunque hay algunas que únicamente tienen una apertura y nada más. hablaremos de ellas más adelante.
+**color rojo:** etiqueta de apertura y de cierre <br />
+**color amarillo:** atributo (en este caso 'href') <br />
+**color verde:** valor asignado al atributo (en este caso 'https://google.com') <br />
+**color negro:** contenido interno (en este caso 'contenido') <br />
+
+Si quieres más información acerca de la etiqueta 'anchor' te dejo el siguiente enlace: <a className='text-customMainBlack' href="https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a">documentacion de etiqueta anchor</a>
+
+Existen 2 tipos de estructura para las etiquetas, las que únicamente requieren de una apertura y nada más, por lo que no requieren de una etiqueta de cierre. Por otro lado, existen etiquetas que requieren de una etiqueta de cierre, por lo que se requiere de una etiqueta de apertura y una etiqueta de cierre. La etiqueta anchor (o 'a') es un claro ejemplo de una etiqueta que necesita de apertura y cierre. Por otro lado, existen etiquetas que únicamente requieren de una apertura y nada más (como la etiqueta img). este tipo de etiquetas tienen una estructura similar, la única diferencia es que se auto-cierran con una barra invertida al final de la etiqueta de apertura (veremos un ejemplo más delante).
+
+## atributos de una etiqueta
+
+Entre los atributos que permite la etiqueta anchor está el **href**, este contiene un anlace o fragmento de URL al cual apunta el enlace, en este ejemplo al buscador google. Pero no solo se limita a esto, también puede apuntar a una sección específica de una página web, o a un archivo local. En este ejemplo el enlace que visualizará el usuario será el texto “contenido”, que redigirá al usuario al buscador de google al hacer click, abriendo el buscador en la misma página, algo que puede mejorar todavía más si nuestra intención es abrir el enlace en una nueva pestaña. Para eso existe el atributo **target** para las etiquetas anchor. El atributo target recibe varios valores cuando lo utilizamos, el más conocido probablemente sea el valor de “**_blank**” para el caso de ser una etiqueta anchor, su función es cargar la URL en una nueva pestaña del navegador, esto es muy útil para cuando la intención no es cambiar el contenido previo a uno nuevo, sino dar un vistazo rápido al enlace.
+
+Algo muy importante es agregar los atributos correctos a las etiquetas correctas, por ejemplo, la etiqueta anchor requiere de un atributo href para funcionar correctamente, por otro lado, la etiqueta h1 (heading 1, o encabezado 1) no requiere de ningún atributo para funcionar correctamente.
+
+<img src="/03-etiqueta.svg" alt="etiqueta" />
+
+La etiqueta h1 (heading 1 o encabezado 1) **sirve para dar un título principal a una página web**. Por lo general, solo se debe usa una vez por página y esta etiqueta no requiere de ningún atributo para funcionar correctamente. Existen 6 tipos de encabezados, desde el h1 (heading 1) hasta el h6 (heading 6), cada uno con su propia importancia y propósito y con mayor importancia entre ellos, por ejemplo, el h1 es el más importante y el h6 es el menos importante
+
+## tipos de etiquetas
+
+**Existen 2 tipos de etiquetas** (mencionadas anteriormente), las que únicamente requieren de una apertura y nada más y las que requieren de una etiqueta de apertura y una de cierre. Esta última ya las conoces, el ejemplo de la etiqueta anchor resumen muy bien el caso de las etiquetas que requieren de apertura y cierre, pero, ¿qué pasa con las etiquetas que únicamente requieren de una apertura y nada más?, ¿cómo se cierran estas etiquetas?. La etiqueta img (image o imagen) es un claro ejemplo de una etiqueta que únicamente requiere de una apertura y esta es su estructura
+
+<img src="/02-etiqueta.svg" alt="etiqueta" />
+
+En este ejemplo la etiqueta img únicamente requiere de una apertura, la manera de cerrar esta etiqueta es agregando una barra invertida al final de la etiqueta de apertura, esto es lo que se conoce como self-closing tag o etiqueta de auto-cierre. La razón de que existen las etiquetas de auto-cierre es porque no requieren de un contenido interno, o sea, no pueden almacenar otra etiqueta dentro de ellas. La etiqueta 'input' también es un buen ejemplo de otra etiqueta de auto-cierre, que su función es interactuar con el usuario y pedir información, ya sea un texto como nombres, apellidos, correos, también puede ser para ingresar una fecha. pero también cumple con la caracteristica de ser de auto-cierre.
+
+Existen muchas etiquetas y cada una se usa para cubrir una necesidad, veremos las más utilizadas más delante, mientras tanto, quédate con la idea de que las etiquetas son el corazón del HTML, sin ellas, no se podría hacer la estructura de ninguna web.
+
+## documentacion
+
+Hablar de cada etiqueta una por una es un trabajo sumamente extenso, si bien HTML empezó con 18 etiquetas, hoy en día se han creado má de 100 etiquetas distintas, cada una cumpliendo un propósito distinto, sin embargo, gracias a la gran comunidad de programadores, desarrolladores y usuarios, se han creado documentaciones y ayudas visuales que te pueden facilitar el aprender y conocer cada una de las etiquetas. Te dejo 2 grandes herramientas que te facilitarán el aprender y conocer cada una de las etiquetas.
+
+<a href="https://lenguajehtml.com/html/introduccion/tabla-periodica-html5/" className='text-customMainBlack' target='_blank'>1. Tabla periodica de las etiquetas HTML (por Manz.Dev)</a>
+
+El autor, Manz.Dev, ha creado una tabla periodica que te facilita aprender cada una de las etiquetas disponibles en HTML, te las agrupa por familias, lo que facilita su aprendizaje y cada una tiene su propia documentación, esto es una herramienta increible para aprender cada una de las etiquetas disponibles en HTML.
+
+<a href="https://lenguajehtml.com/html/introduccion/tabla-periodica-html5/" className='text-customMainBlack' target='_blank'>
+<img src="/04-etiqueta.svg" alt="tabla periodica" />
+</a>
+
+<a href="https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements" className='text-customMainBlack' target='_blank'>2. Documentacion oficial MDN Web Docs</a>
+
+Esta documentación es la que oficialmente se usa para aprender HTML, contiene una lista de todas las etiquetas disponibles en HTML y su propósito, además, también te muestra un listado de los atributos que puedes usar con cada etiqueta, lo que te facilita aprender cada una de las etiquetas disponibles en HTML. Una documentación completa y detallada que te ayudará a aprender.
+
+<a href="https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements" className='text-customMainBlack' target='_blank'>
+<img src="/05-etiqueta.svg" alt="documentacion oficlal mdn web docs" />
+</a>
+
+## no todo es teoria
+A continuación, se lista una serie de ejercicios para practicar esta primera parte, trata de hacerlos a conciencia y con el propósito de que puedas entender por completo esta sección. Puedes revisar el bloque 0, 'no todo es teoria', para que sepas la manera más optima de hacer tus tareas y que lleves un registro de lo que has hecho.
+
+### listado de etiquetas
+<ul>
+    <li>1. Enlista 10 etiquetas que necesitan etiqueta de cierre</li>
+    <li>2. Enlista 10 etiquetas que no necesitan etiqueta de cierre</li>
+    <li>3. Enlista 10 atributos que puedes usar con las etiquetas</li>
+    <li>4. De la lista de las etiquetas anteriores, ¿cuáles permiten usar los siguiente atributos? **"type", "value", "href", "src", "placeholder"**</li>
+</ul>
