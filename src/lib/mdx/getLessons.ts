@@ -8,6 +8,7 @@ export interface Lesson {
     slug: string;
     description: string;
     filePath: string;
+    headings: { level: number; text: string; slug: string }[];
 }
 
 export interface BlockMetadata {
@@ -38,6 +39,7 @@ export const getLessons = async (blockId: string): Promise<Lesson[]> => {
             slug: data.slug || filename.replace('.mdx', ''),
             description: data.description || '',
             filePath: filename,
+            headings: extractHeadings(fileContent),
         };
     });
 
@@ -60,4 +62,23 @@ export const getBlockMetadata = async (blockId: string): Promise<BlockMetadata |
         level: data.level || 'Básico',
         description: data.description || '',
     };
+};
+
+export const extractHeadings = (content: string) => {
+    const headingRegex = /^(##?)\s+(.*)$/gm;
+    const headings: { level: number; text: string; slug: string }[] = [];
+
+    let match;
+    while ((match = headingRegex.exec(content)) !== null) {
+        const level = match[1].length;
+        const text = match[2].trim();
+        const slug = text
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, "")
+            .replace(/\s+/g, "-");
+
+        headings.push({ level, text, slug });
+    }
+
+    return headings;
 };
