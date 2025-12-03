@@ -29,9 +29,9 @@ const BlockLayout = async ({
 
       <div className="drawer-side">
         <label htmlFor="drawer-sidebar" className="drawer-overlay" />
-        <aside className="min-h-full w-80 p-4 border-r border-customGray/40">
-          <ul className="menu">
-            <Link href={"/blocks/" + blockId} className="py-1 px-3 text-customMainBlack">
+        <aside className="min-h-full w-80 p-4 pl-0 border-r border-customGray/40">
+          <ul className="menu pl-0">
+            <Link href={"/blocks/" + blockId} className="py-1 pr-3 text-customMainBlack">
               {metadata?.title || blockId}
             </Link>
             {lessons.map((lesson) => (
