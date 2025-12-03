@@ -1,0 +1,79 @@
+---
+title: "estructura"
+order: 3
+slug: "estructura"
+description: "Aprende qué es la estructura HTML y cómo funciona"
+---
+
+## estructura de un documento HTML
+
+Ahora que ya conoces las etiquetas, atributos y tipos de etiquetas, es momento de ver cómo estructurar y empezar a usar elementos en conjunto para crear un documento HTML. Este bloque se enfocará en **anidación de elementos, estructura básica de secciones importantes y la importancia de la semántica**
+
+## anidación de elementos
+
+La anidación de elementos **se refiere a la forma en que se pueden anidar o embeber elementos dentro de otros elementos**, es decir, que un elemento puede contener a otro elemento dentro de él, y este a su vez puede contener a otro elemento, y así sucesivamente. Por ejemplo, la etiqueta 'div' puede contener a la etiqueta 'p' (parrafo), que a su vez puede contener a la etiqueta 'a' (enlace), que a su vez puede contener a la etiqueta 'img' (imagen).
+
+Algo importante es que únicamente las etiquetas que requieren de apertura y cierre pueden anidarse, por lo que las etiquetas de auto-cierre no pueden anidarse. Esto significa que las etiquetas de auto-cierre solo pueden ser elementos hijos de otros elementos que requieren de apertura y cierre.
+
+_el siguiente ejemplo muestra la anidación de elementos entre una etiqueta 'div' y una etiqueta 'h1'_:
+
+<img src="/html/01-estructura.svg" alt="estructura" />
+
+**elemento div:** según la documentación de la página de MDN, el elemento div es un contenedor genérico para el contenido, no tiene significado en si hasta que se le aplican estilos o se le da un significado semántico. En otras palabras, es un contenedor que puede envolver a otros elementos.
+
+**elemento h1:** el elemento h1 es un encabezado de nivel 1, es decir, es el encabezado más importante de una página web, generalmente se usa para dar un título a una página web. Existen 6 encabezados, desde el h1 hasta el h6, cada uno con su propia importancia y propósito y con mayor importancia entre ellos, por ejemplo, el h1 es el más importante y el h6 es el menos importante.
+
+No solamente los elementos pueden tener un solo elemento hijo, la complejidad puede llegar a ser mucho mayor dependiendo de las necesidades de la página, un elemento div puede contener muchos más elementos dentro de el mismo, sin embargo, aquí te muestro los anidamientos más comúnes que se pueden encontrar en una página web
+
+## estructura en la navegación
+
+La anidación común en la vista de navegación utiliza los elementos 'nav', 'ul' (unordered list o lista desordenada), 'li' (list item o elemento de lista) y 'a' (anchor o enlace). Cada uno de etos elementos **tiene su importancia semántica** y todos estos elementos en conjunto trabajan para dar una estructura semántica a la navegación de una página web. Su anidación sería algo parecido a esto:
+
+<img src="/html/02-estructura.svg" alt="estructura de la navegación" />
+
+Este ejemplo muestra la estructura más simple y común que se puede encontrar en una página web, la cual consta de una etiqueta 'nav' que contiene a una etiqueta 'ul' que a su vez contiene a varias etiquetas 'li' que a su vez contienen a varias etiquetas 'a'. Todas ellas en conjunto forman una lista desordenada que contiene enlaces a diferentes secciones de la página web, lo que permite al usuario navegar por la página web de manera cómoda y eficiente.
+
+## estructura en el contenido principal
+
+Otra sección común que se encuentra en una página web es el contenido principal, la cual generalmente se encuentra dentro de una etiqueta 'body'. Esta se encarga de contener todo el contenido principal de la página web, dentro de la etiqueta 'body' se puede encontrar la etiqueta 'main', que a su vez puede contener diferentes tipos de elementos como 'h1', 'p', 'a', 'img', etc.
+
+<img src="/html/03-estructura.svg" alt="estructura del contenido principal" />
+
+Este ejemplo muestra la estructura más simple y común que se puede encontrar en una página web, la cual consta de una etiqueta 'body' que contiene a una etiqueta 'main' que a su vez que a su vez puede contener varios artículos, cada uno con secciones con un título principal y un contenido interno, lo que permite al usuario navegar por la página web de manera cómoda y eficiente.
+
+Ya te puedes dar una idea de la estructura que puede llegar a tener la sección del footer o tambíen llamado pie de página, la cual generalmente se encuentra dentro de una etiqueta 'footer'. Esta se encarga de contener todo el contenido del pie de página de la página web, dentro de la etiqueta 'footer' se puede encontrar una navegación simple para diferentes secciones de la página web, como la sección de contacto, la sección de acerca de, la sección de términos y condiciones, etc. También puede contener información de derechos de autor, información de contacto, etc.
+
+## importancia de la semántica
+
+La semántica es la idea de que cada elemento tiene un significado en sí, es decir, que cada elemento tiene un significado semántico. Por ejemplo, la etiqueta 'h1' tiene un significado semántico de que es un encabezado de nivel 1, la etiqueta 'p' tiene un significado semántico de que es un párrafo, la etiqueta 'a' tiene un significado semántico de que es un enlace, la etiqueta 'img' tiene un significado semántico de que es una imagen, etc. La importancia de la semántica es que permite al motor de búsqueda entender mejor la estructura de la página web, lo que permite al usuario navegar por la página web de manera cómoda y eficiente, sabiendo que cada elemento cumple la función con la que fue creada.
+
+**sin embargo,** es muy fácil caer en el error de no respetar la semántica de los elementos, ¿recuerdas el elemento div?, es muy fácil pensar que todo elemento es un div, o sea, un contenedor genérico sin identidad propia, **de ahí la importancia de conocer los elementos y su semántica**, sin mencionar que la semántica también se refiere a qué elementos pueden ir dentro de otros, **que un elemento tenga etiqueta de apertura y cierre no significa que puede alojar cualqueir elemento, hay que respetar la semántica de los elementos**
+
+¿Y cómo puedo saber si mes estructura es semánticamente correcta?, ¿cómo puedo saber si una etiqueta puede ir dentro de otra y su semántica sea correcta?.
+
+Afortunadamente existen documentaciones y herramientas que nos pueden facilitar el resolver estas dudas, como por ejemplo la documentación de la página de MDN, la cual nos da una explicación detallada de cada elemento y su semántica, también nos da una lista de los elementos que pueden ir dentro de otros, lo que nos permite saber si una etiqueta puede ir dentro de otra y su semántica sea correcta.
+
+También existen herramientas en línea que nos pueden facilitar el resolver estas dudas, por ejemplo, <a target='_blank' href="https://caninclude.onrender.com/">la páginad de canInclude</a>, permite validar rápidamente si un elemento puede ir dentro de otro y su semántica sea correcta.
+
+<a target='_blank' href="https://caninclude.onrender.com/"><img src="/html/04-estructura.svg" alt="caninclude" /></a>
+
+El siguiente ejemplo muestra la respuesta de canInclude cuando queremos validar si un elemento section (lado izquierdo) puede ir dentro de una etiqueta h1 (lado derecho), aunque si se pueda, semánticamente no es correcto.
+
+<a target='_blank' href="https://caninclude.onrender.com/"><img src="/html/05-estructura.svg" alt="semántica de section y h1"/></a>
+
+## recomendaciones finales
+
+Antes de cerrar esta sección es importante tomar algunas recomendaciones semánticas que te ayudarán a resolver dudas en el futuro.
+
+**1. respeta tus titulos principales por página**
+Semánticamente solo puedes tener un elemento 'h1' por página, ya que el elemento 'h1' es el encabezado principal de la página, y por lo tanto, solo debe existir uno por página. Siempre que quieras agregar un nuevo encabezado, puedes usar el elemento 'h2', 'h3', 'h4', 'h5' o 'h6', dependiendo de la importancia del encabezado.
+
+**2. respeta tus secciones principales por página**
+Semánticamente solo puedes tener un elemento 'main', 'footer' y 'nav' por página, ya que estos elementos son los que componen la estructura principal de la página, y por lo tanto, solo debe existir uno por página.
+
+**3. no abuses con el uso del elemento 'div'**
+El elemento 'div' es un contenedor genérico sin identidad propia, por lo tanto, no debes usarlo solo por la comodidad de tener un contenedor, debes usarlo cuando realmente sea necesario, es decir, cuando ningún elemento HTML cumpla con la función con la que deseas usarlo.
+
+Estas recomendaciones te ayudarán a poder estructurar tu página web de manera semántica y coherente, lo que permitirá al motor de búsqueda entender mejor la estructura de la página web, permita al usuario entender mejor la estructura de la página web y además si en un futuro quieres hacer mejorar tu página web, sabrás cómo hacerlo gracias a las recomendaciones semánticas de esta sección.
+
+## no todo es teoría
