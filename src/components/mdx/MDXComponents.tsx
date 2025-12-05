@@ -1,4 +1,5 @@
 import { HTMLProps } from "react";
+import { CodeBlock, PreBlock } from "./CodeBlock";
 
 const generateSlug = (text: string): string => {
   return text
@@ -32,4 +33,6 @@ const H3 = ({ children, ...props }: HTMLProps<HTMLHeadingElement>) => {
 export const mdxComponents = {
   h2: H2,
   h3: H3,
+  code: CodeBlock,
+  pre: PreBlock,
 };
