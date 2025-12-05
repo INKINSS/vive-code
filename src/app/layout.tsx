@@ -1,6 +1,7 @@
-import React from 'react'
-import './globals.css'
-import NavBar from '@/components/navBar/NavBar'
+import React from "react";
+import "./globals.css";
+import "highlight.js/styles/atom-one-dark.css";
+import NavBar from "@/components/navBar/NavBar";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,7 +14,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </body>
     </html>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
